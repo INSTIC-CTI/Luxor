@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:wght@900&display=swap");
 /* Global styles */
 
 *,
@@ -10,12 +10,12 @@
 }
 
 :root {
-  --main-font: 'Source Sans Pro', sans-serif;
-  --secondary-font: 'Herr Von Muellerhoff', sans-serif;
-  --body-font: 'Cabin',sans-serif;
+  --main-font: "Source Sans Pro", sans-serif;
+  --secondary-font: "Herr Von Muellerhoff", sans-serif;
+  --body-font: "Cabin", sans-serif;
   --main-font-color-dark: #252525;
   --secondary-font-color: #c59d5f;
-  --body-font-color:#515151;
+  --body-font-color: #515151;
 }
 
 html {
@@ -29,7 +29,7 @@ img {
   max-width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
 }
 .container {
@@ -44,13 +44,13 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0,.5), transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
 .nav {
   height: 7.2rem;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 .menu-toggle {
   color: #fff;
@@ -59,7 +59,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   right: 2.5rem;
-  cursor:pointer;
+  cursor: pointer;
   z-index: 1500;
 }
 
@@ -72,24 +72,24 @@ header {
   top: 0;
   left: 0;
   width: 80%;
-  height:100vh;
-  background:var(--main-font-color-dark);
-  padding:4.4rem;
+  height: 100vh;
+  background: var(--main-font-color-dark);
+  padding: 4.4rem;
   transform: translateX(-100%);
-  transition: transform .5s
+  transition: transform 0.5s;
 }
 
 .nav::before {
-  content:"";
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100vh;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
   opacity: 0;
   transform: scale(0);
-  transition: opacity .5s
+  transition: opacity 0.5s;
 }
 
 .open .fa-times {
@@ -100,19 +100,22 @@ header {
 }
 
 .open .nav-list {
-  transform:  translateX(0);
+  transform: translateX(0);
 }
 
 .open .nav::before {
-  opacity:1;
+  opacity: 1;
   transform: scale(1);
 }
 
 .nav-item {
-  border-bottom: 2px solid rgba(255,255,255,0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 .nav-link {
   display: block;
   color: #fff;
   text-transform: uppercase;
+}
+.nav-link:hover {
+  color: var(--secondary-font-color);
 }
